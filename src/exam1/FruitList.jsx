@@ -592,6 +592,7 @@ const FruitList = [
         id: 8,
         name: "참외",
         emoji: "🍈",
+        img: "https://images.pexels.com/photos/37525326/pexels-photo-37525326.jpeg",
         desc: "박과에 속하는 여름 대표 과일이에요. 과일 중 엽산 함량이 가장 높아 빈혈 예방과 기력 회복에 좋으며, 풍부한 칼륨이 몸속 나트륨과 독소를 배출해 줍니다.",
         season: "여름",
         color: "#fbc02d",
