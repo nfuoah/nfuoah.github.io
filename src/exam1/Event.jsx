@@ -1,16 +1,15 @@
 // src/exam1/Event.jsx
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom"; // 💡 핵심 추가: 라우터 주머니를 열기 위해 수신 훅 임포트!
+import { useLocation } from "react-router-dom";
 import EventList from "./EventList";
 import "./styles.css";
 
 function Event() {
-  const location = useLocation(); // 💡 핵심 추가: 네비게이트로 전달된 주머니(state) 받기
+  const location = useLocation(); 
   const [selectedRegion, setSelectedRegion] = useState("전체");
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isFavorite, setIsFavorite] = useState(false);
 
-  // 💡 핵심 추가: 스크랩북이나 외부 배너를 타고 특정 행사 데이터를 들고 왔을 때 자동 상세 보기 처리
   useEffect(() => {
     if (location.state && location.state.autoSelectEvent) {
       const targetEvent = location.state.autoSelectEvent;
